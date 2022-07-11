@@ -47,6 +47,49 @@
                     </label>
                 </div>
             </div>
+            <div class="row">
+                <label class="label" for="gender">Gender</label>
+                <div class="gender">
+                    <div class="section">
+                        <input type="radio" id="male" name="male" valeu="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="section">
+                        <input type="radio" id="female" name="female" valeu="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label class="label" for="department">Department</label>
+                <div class="department">
+                    <div class="section">
+                        <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                        <label for="hr">HR</label>
+                    </div>
+                    <div class="section">
+                        <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                        <label for="sales">Sales</label>
+                    </div>
+                    <div class="section">
+                        <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                        <label for="finance">Finance</label>
+                    </div>
+                    <div class="section">
+                        <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <label for="engineer">Engineer</label>
+                    </div>
+                    <div class="section">
+                        <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                        <label for="others">Others</label>
+                    </div>
+                </div> 
+            </div>
+            <div class="row">
+                <label class="label" for="salary">Salary</label>
+                <input class="salary" type="range" id="salary" name="salary" min="10000" max="100000" step="1000" value="50000">
+                <output class="salary-output label" for="salary">50000</output>
+            </div>
         </form>
     </div>
 </body>

@@ -85,8 +85,32 @@ input{
 }
 .icon{
     display: flex;
+    gap: 5px;
 }
 .radio img{
     width: 35px;
     height: 35px;
+}
+.gender{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    opacity: 1;
+    font-family: 'Roboto';
+    font-size: 16px;
+    gap: 20px;
+}
+.section{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.department{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    opacity: 1;
+    font-family: 'Roboto';
+    font-size: 16px;
+    gap: 20px;
 }
