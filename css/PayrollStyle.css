@@ -38,7 +38,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid gold;
+    border: 0px solid gold;
 
 }
 .form{
@@ -123,4 +123,37 @@ input{
     width: 70px;
     height: 30px;
     margin-right: 20px;
+    border-radius: 5px;
+}
+.row textarea{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    gap: 50px;
+}
+button{
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    margin-top: 15px;
+    border: 1px;
+    border-radius: 10px;
+    background: rgb(158, 156, 156);
+}
+button:hover{
+    background: rgb(90, 228, 90);
+    transition: 0.5s ease;
+    font-weight: bold;
+}
+.cancel button:hover{
+    background: rgb(236, 77, 77);
+    transition: 0.5s ease;
+    font-weight: bold;
 }
