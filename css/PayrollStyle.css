@@ -4,6 +4,7 @@
 body{
     margin: 0;
     height: 100%;
+    background: rgb(209, 209, 209);
 }
 .header{
     padding: 10px 0;
@@ -27,8 +28,53 @@ body{
 .logoContent img{
     width: 40px;
     height: 40px;
+    border: 2px solid rgb(34, 34, 34);
 }
 .employee{
     color: rgb(32, 168, 32);
 }
+.form-content{
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gold;
 
+}
+.form{
+    border: 0px solid red;
+    width: 60%;
+    padding: 60px 70px;
+    background: white;
+    box-shadow: 0px 3px 6px grey;
+    border-radius: 10px;
+    opacity: 1;
+}
+.form-head{
+    color: black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 20px;
+    opacity: 1;
+    font-size: 21px;
+}
+.row{
+    display: flex;
+    align-content: center;
+    margin-bottom: 10px;
+    border: 0px solid blue;
+}
+.label{
+    min-width: 140px;
+    font-size: 16px;
+    opacity: 1;
+    font-family: 'Roboto';
+    font-size: 16px;
+    padding: 12px 12px 12px 0;
+}
+input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
