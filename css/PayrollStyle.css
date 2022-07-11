@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    height: 8%;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+    padding-left: 100px;
+}
+.header img{
+    width: 50px;
+    height: 50px;
+}
+.header span{
+    color: rgb(97, 170, 97);
+}
