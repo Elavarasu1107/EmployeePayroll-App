@@ -1,24 +1,30 @@
 *{
     box-sizing: border-box;
-    margin: 0;
 }
 body{
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100%;
 }
 .header{
+    padding: 10px 0;
+    background-color: aliceblue;
+}
+.headerContent{
     display: flex;
-    height: 8%;
+    justify-content: center;
     align-items: center;
-    font-weight: bold;
-    gap: 10px;
-    padding-left: 100px;
+    border: 2px solid rebeccapurple;
 }
-.header img{
-    width: 50px;
-    height: 50px;
+.logoContent{
+    display: flex;
+    align-items: center;
+    border: 2px solid red;
+    width: 80%;
+    gap: 5px;
 }
-.header span{
-    color: rgb(97, 170, 97);
+.logoContent img{
+    width: 40px;
+    height: 40px;
 }
+
+
