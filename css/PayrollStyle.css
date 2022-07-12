@@ -209,3 +209,21 @@ button:hover{
         background: rgb(158, 156, 156);
     }
 }
+
+@media screen and (max-width:480px){
+    body {
+        margin: 0;
+        height: 100%;
+        background: rgb(209, 209, 209);
+        width: 125%;
+    }
+    .form {
+        border: 0px solid red;
+        width: 100%;
+        padding: 60px 70px;
+        background: white;
+        box-shadow: 0px 3px 6px grey;
+        border-radius: 10px;
+        opacity: 1;
+    }
+}
