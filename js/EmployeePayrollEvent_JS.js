@@ -81,27 +81,3 @@ const getSelectedValues = (propertyValue) =>{
     });
     return selectedItems;
 }
-
-const resetForm = () =>{
-    setDefaultValue('#name','');
-    unCheckValues('[name = profile]');
-    unCheckValues('[name = gender]');
-    unCheckValues('[name = department]');
-    setDefaultValue('#salary','50000');
-    setDefaultValue('day','day');
-    setDefaultValue('month','month');
-    setDefaultValue('year','2020');
-    setDefaultValue('#notes','');
-}
-
-const setDefaultValue = (id, value) =>{
-    const item = document.querySelector(id)
-    item.textContent = value;
-}
-
-const unCheckValues = (propertyValue) =>{
-   let allItems = document.querySelectorAll(propertyValue);
-   allItems.forEach(item =>{
-    item.checked = false;
-   });
-}
