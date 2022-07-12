@@ -157,6 +157,12 @@ button:hover{
     transition: 0.5s ease;
     font-weight: bold;
 }
+.ex{
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    font-style: italic;
+}
 
 @media screen and (max-width:960px){
     .form{

@@ -20,44 +20,45 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);return false">
+        <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">Employee Payroll Form</div>
             <div class="row">
                 <label class="label" for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter Name" requried>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+                <error class="nameError ex" for="name"></error>
             </div>
             <div class="row">
                 <label class="label" for="profile">Profile Image</label>
                 <div class="radio">
                     <label class="icon">
-                        <input type="radio" id="profile one" name="profile" value="../assets/employee-1.png" requried>
-                        <img class="image" src="../assets/employee-1.png" alt="employee1">
+                        <input type="radio" id="profile1" name="profile" value="../assets/employee-1.png" required>
+                        <img class="image" src="../assets/employee-1.png" id="image1" alt="employee1">
                     </label>
                     <label class="icon">
-                        <input type="radio" id="profile two" name="profile" value="../assets/employee-2.png" requried>
-                        <img class="image" src="../assets/employee-2.png" alt="employee1">
+                        <input type="radio" id="profile2" name="profile" value="../assets/employee-2.png" required>
+                        <img class="image" src="../assets/employee-2.png" id="image2" alt="employee2">
                     </label>
                     <label class="icon">
-                        <input type="radio" id="profile three" name="profile" value="../assets/employee-3.png" requried>
-                        <img class="image" src="../assets/employee-3.png" alt="employee1">
+                        <input type="radio" id="profile3" name="profile" value="../assets/employee-3.png" required>
+                        <img class="image" src="../assets/employee-3.png" id="image3" alt="employee3">
                     </label>
                     <label class="icon">
-                        <input type="radio" id="profile four" name="profile" value="../assets/employee-4.png" requried>
-                        <img class="image" src="../assets/employee-4.png" alt="employee1">
+                        <input type="radio" id="profile4" name="profile" value="../assets/employee-4.png" required>
+                        <img class="image" src="../assets/employee-4.png" id="image4" alt="employee4">
                     </label>
                 </div>
             </div>
             <div class="row">
                 <label class="label" for="gender">Gender</label>
                 <div class="gender">
-                    <div class="section">
-                        <input type="radio" id="male" name="male" valeu="male" required>
+                    <label class="section">
+                        <input type="radio" id="male" name="gender" value="male" required>
                         <label for="male">Male</label>
-                    </div>
-                    <div class="section">
-                        <input type="radio" id="female" name="female" valeu="female" required>
+                    </label>
+                    <label class="section">
+                        <input type="radio" id="female" name="gender" value="female" required>
                         <label for="female">Female</label>
-                    </div>
+                    </label>
                 </div>
             </div>
             <div class="row">
@@ -93,7 +94,7 @@
             <div class="row">
                 <label class="label" for="startDate">Start Date</label>
                 <div class="dropDown">
-                    <select class="options" id="day" name="Day">
+                    <select class="options day" id="day" name="Day">
                         <option value="Day" selected>Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -127,7 +128,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select class="options" id="month" name="Month">
+                    <error class="errorDay" for="day"></error>
+                    <select class="options month" id="month" name="Month">
                         <option value="Month" selected>Month</option>
                         <option value="Jan">Jan</option>
                         <option value="Feb">Feb</option>
@@ -142,7 +144,8 @@
                         <option value="Nov">Nov</option>
                         <option value="Dec">Dec</option>
                     </select>
-                    <select class="options" id="year" name="Year">
+                    <error class="errorMonth" for="month"></error>
+                    <select class="options year" id="year" name="Year">
                         <option value="Year" selected>Year</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
@@ -156,6 +159,7 @@
                         <option value="2027">2027</option>
                         <option value="2028">2028</option>
                     </select>
+                    <error class="errorYear" for="year"></error>
                 </div>
             </div>
             <div class="row">
@@ -165,8 +169,8 @@
             <div class="button">
                 <div class="cancel"><a href=""><button>Cancel</button></a></div>
                 <div>
-                    <button>Submit</button>
-                    <button>Reset</button>
+                    <button type="submit" id="submit">Submit</button>
+                    <button type="reset">Reset</button>
                 </div>
             </div>
         </form>
