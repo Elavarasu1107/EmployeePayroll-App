@@ -164,6 +164,11 @@ button:hover{
     transition: 0.5s ease;
     font-weight: bold;
 }
+.reset:hover{
+    background: rgb(238, 241, 77);
+    transition: 0.5s ease;
+    font-weight: bold;
+}
 .ex{
     font-weight: bolder;
     font-family: 'Roboto', sans-serif;

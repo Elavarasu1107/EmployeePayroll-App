@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/PayrollStyle.css"/>
-    <link href="../assets/logoTab.jpeg" rel="icon">
+    <link href="../assets/tab_icon.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script defer src="../js/EmployeePayroll_JS.js"></script>
+    <script defer src="../js/EmployeePayrollEvent_JS.js"></script>
     <title>Employee Form</title>
 </head>
 <body>
@@ -66,23 +67,23 @@
                 <label class="label" for="department">Department</label>
                 <div class="department">
                     <div class="section">
-                        <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                        <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                         <label for="hr">HR</label>
                     </div>
                     <div class="section">
-                        <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+                        <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
                         <label for="sales">Sales</label>
                     </div>
                     <div class="section">
-                        <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
+                        <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
                         <label for="finance">Finance</label>
                     </div>
                     <div class="section">
-                        <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
                         <label for="engineer">Engineer</label>
                     </div>
                     <div class="section">
-                        <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+                        <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
                         <label for="others">Others</label>
                     </div>
                 </div> 
@@ -96,7 +97,7 @@
                 <label class="label" for="startDate">Start Date</label>
                 <div class="dropDown">
                     <select class="options day" id="day" name="Day">
-                        <option value="Day" selected>Day</option>
+                        <option value="">Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -129,9 +130,8 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <error class="errorDay" for="day"></error>
                     <select class="options month" id="month" name="Month">
-                        <option value="Month" selected>Month</option>
+                        <option value="">Month</option>
                         <option value="Jan">Jan</option>
                         <option value="Feb">Feb</option>
                         <option value="Mar">Mar</option>
@@ -145,9 +145,8 @@
                         <option value="Nov">Nov</option>
                         <option value="Dec">Dec</option>
                     </select>
-                    <error class="errorMonth" for="month"></error>
                     <select class="options year" id="year" name="Year">
-                        <option value="Year" selected>Year</option>
+                        <option value="">Year</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
                         <option value="2020">2020</option>
@@ -160,8 +159,8 @@
                         <option value="2027">2027</option>
                         <option value="2028">2028</option>
                     </select>
-                    <error class="errorYear" for="year"></error>
                 </div>
+                <error class="errorDate" for="startDate"></error>
             </div>
             <div class="row">
                 <label class="label" for="notes">Notes</label>
@@ -170,8 +169,8 @@
             <div class="button">
                 <div class="cancel"><a href=""><button>Cancel</button></a></div>
                 <div>
-                    <button type="submit" id="submit">Submit</button>
-                    <button type="reset">Reset</button>
+                    <button class="submit" type="submit" id="submit">Submit</button>
+                    <button class="reset" type="reset">Reset</button>
                 </div>
             </div>
         </form>
