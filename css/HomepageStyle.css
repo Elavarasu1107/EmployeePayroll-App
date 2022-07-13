@@ -79,3 +79,66 @@ body{
 .add-user{
     font-size: 20px;
 }
+.table-main{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    border: 0px solid rebeccapurple;
+}
+.table{
+    width: 100%;
+    border: 0px solid red;
+    border-collapse: separate;
+    border-spacing: 0px 15px;
+    min-width: 800px;
+}
+td,th{
+    border: 0px solid rebeccapurple;
+    text-align: left;
+    padding: 5px 8px;
+}
+th{
+    background: rgb(44, 50, 79);
+    color: white;
+    border-radius: 3px;
+    text-align: left;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    opacity: 1;
+    height: 50px;
+}
+tr:not(:first-child){
+    background: white;
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+.actions{
+    display: table-cell;
+    align-items: center;
+}
+td{
+    color: #3d3d3d;
+    opacity: 1;
+}
+td:first-child{
+    display: flex;
+    align-items: center;
+}
+td img:first-child{
+    margin-right: 10px;
+    border-radius: 100%;
+}
+td img{
+    cursor: pointer;
+}
+.department{
+    background: yellow;
+    border-radius: 40px;
+    width: fit-content;
+    padding: 1px 7px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
