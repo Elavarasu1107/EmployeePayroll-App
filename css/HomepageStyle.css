@@ -6,6 +6,7 @@ body{
     height: 100%;
     font-family: 'Roboto';
     font-size: 16px;
+    background: whitesmoke;
 }
 .header{
     border: 0px solid red;
@@ -25,4 +26,56 @@ body{
 }
 .employee{
     color: rgb(32, 168, 32);
+}
+.menu{
+    border: 0px solid gold;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+.menu-content{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 5px;
+}
+.employee-count{
+    border: 0px solid red;
+    background: rgb(75, 169, 75);
+    border-radius: 40%;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 2px;
+    margin-top: 2px;
+}
+.employee-details{
+    font-size: 20px;
+}
+.add-button{
+    border: 0px solid red;
+    background: rgb(75, 169, 75);
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    width: 150px;
+    height: 40px;
+}
+.add-button a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.add-button a img{
+    width: 35px;
+    height: 35px;
+}
+.add-user{
+    font-size: 20px;
 }
