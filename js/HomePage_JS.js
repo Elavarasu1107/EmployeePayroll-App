@@ -1,11 +1,20 @@
+let employeePayrollList;
+
 window.addEventListener('DOMContentLoaded', (event)=>{
+    employeePayrollList = getEmployeeDateFromLocalStorage();
+    document.querySelector('.employee-count').textContent = employeePayrollList.length;
     createInnerHtml();
 });
 
+const getEmployeeDateFromLocalStorage = () =>{
+    return localStorage.getItem('EmployeePayrollList') ? JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
+}
+
 const createInnerHtml = () =>{
+    if(employeePayrollList.length == 0) {return;}
     const headerHtml = "<tr class='table-header'><th></th><th>Name</th><th>Gender</th><th>Salary</th><th>Department</th><th>Start Date</th><th>Actions</th></tr>";
     let innerHtml = `${headerHtml}`;
-    let employeePayrollList = createEmployeePayrollJSONObject();
+    //let employeePayrollList = createEmployeePayrollJSONObject();
     for(const employeePayrollData of employeePayrollList)
     {
         innerHtml = `${innerHtml}
