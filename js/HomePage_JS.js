@@ -11,10 +11,7 @@ const createInnerHtml = () =>{
             <td>${employeePayrollDate._name}</td>
             <td>${employeePayrollDate._gender}</td>
             <td>${employeePayrollDate._salary}</td>
-            <td>
-                <div class="department">${employeePayrollDate._department[0]}</div>
-                <div class="department">${employeePayrollDate._department[1]}</div>
-            </td>
+            <td>${getDept(employeePayrollDate._department)}</td>
             <td>${employeePayrollDate._startDate}</td>
             <td class="actions">
                 <img id="${employeePayrollDate._id}" onclick="remove(this)" alt="delete" src="../assets/delete.png" width="20px" height="20px">
@@ -55,4 +52,13 @@ const createEmployeePayrollJSONObject = () =>{
         }
     ];
     return employeePayrollListLocal;
+}
+
+const getDept = (deptList) =>{
+    let dept ='';
+    for(const item of deptList)
+    {
+        dept = `${dept} <div class='department'>${item}</div>`
+    }
+    return dept;
 }
