@@ -14,7 +14,6 @@ const createInnerHtml = () =>{
     if(employeePayrollList.length == 0) {return;}
     const headerHtml = "<tr class='table-header'><th></th><th>Name</th><th>Gender</th><th>Salary</th><th>Department</th><th>Start Date</th><th>Actions</th></tr>";
     let innerHtml = `${headerHtml}`;
-    //let employeePayrollList = createEmployeePayrollJSONObject();
     for(const employeePayrollData of employeePayrollList)
     {
         innerHtml = `${innerHtml}
@@ -33,38 +32,6 @@ const createInnerHtml = () =>{
         `;
     }
     document.querySelector('#table').innerHTML = innerHtml;
-}
-
-const createEmployeePayrollJSONObject = () =>{
-    let employeePayrollListLocal = [
-        {
-            _name: 'Elavarasu',
-            _gender: 'Male',
-            _department:[
-                'Engineer',
-                'Others'
-            ],
-            _salary: '50000',
-            _startDate:'10 June 2022',
-            _note:'',
-            _id: new Date().getTime(),
-            _profilePic: '../assets/Profile/employee-1.jpeg'
-        },
-        {
-            _name: 'Nantha Gopal',
-            _gender: 'Male',
-            _department:[
-                'Engineer',
-                'HR'
-            ],
-            _salary: '70000',
-            _startDate:'10 May 2022',
-            _note:'',
-            _id: new Date().getTime()+1,
-            _profilePic: '../assets/Profile/employee-4.jpeg'
-        }
-    ];
-    return employeePayrollListLocal;
 }
 
 const getDept = (deptList) =>{
