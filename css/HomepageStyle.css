@@ -113,8 +113,7 @@ tr:not(:first-child){
     border-radius: 3px;
 }
 .actions{
-    display: table-cell;
-    align-items: center;
+   margin-left: 15px;
 }
 td{
     color: #3d3d3d;
