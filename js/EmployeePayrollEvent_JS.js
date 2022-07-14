@@ -140,14 +140,6 @@ const checkForUpdate =()=>{
     setForm();
 }
 
-/*const checkForUpdate = () => {
-    const empPayrollJson = localStorage.getItem('editEmp');
-    isUpdate = empPayrollJson ? true : false;
-    //if(!isUpdate) {return;}
-    employeePayrollObject = JSON.parse(empPayrollJson);
-    setForm();
-}*/
-
 const setForm =()=>{
     setValue('#name', employeePayrollObject._name);
     setSelectedValue('[name=profile]', employeePayrollObject._profilePic);
