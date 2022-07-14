@@ -84,6 +84,7 @@ const getSelectedValues = (propertyValue) =>{
 }
 
 function createLocalStorage(employeePayroll){
+    //localStorage.clear();
     let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
     if(employeePayrollList != undefined)
     {
