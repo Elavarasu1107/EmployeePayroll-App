@@ -22,8 +22,12 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
             <div class="form-head">Employee Payroll Form</div>
+            <div class="row">
+                <label class="label" for="id">ID</label>
+                <input type="text" id="id" name="id" placeholder="Enter ID" required>
+            </div>
             <div class="row">
                 <label class="label" for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter Name" required>
@@ -95,7 +99,7 @@
             </div>
             <div class="row">
                 <label class="label" for="startDate">Start Date</label>
-                <div class="dropDown">
+                <div class="dropDown" id="date">
                     <select class="options day" id="day" name="Day">
                         <option value="">Day</option>
                         <option value="1">1</option>
@@ -132,18 +136,18 @@
                     </select>
                     <select class="options month" id="month" name="Month">
                         <option value="">Month</option>
-                        <option value="1">Jan</option>
-                        <option value="2">Feb</option>
-                        <option value="3">Mar</option>
-                        <option value="4">Apr</option>
-                        <option value="5">May</option>
-                        <option value="6">Jun</option>
-                        <option value="7">Jul</option>
-                        <option value="8">Aug</option>
-                        <option value="9">Sep</option>
-                        <option value="10">Oct</option>
-                        <option value="11">Nov</option>
-                        <option value="12">Dec</option>
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="March">Mar</option>
+                        <option value="April">Apr</option>
+                        <option value="May">May</option>
+                        <option value="June">Jun</option>
+                        <option value="July">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
                     </select>
                     <select class="options year" id="year" name="Year">
                         <option value="">Year</option>
@@ -160,14 +164,14 @@
                         <option value="2028">2028</option>
                     </select>
                 </div>
-                <error class="errorDate" for="startDate"></error>
+                <error class="errorDate ex" for="startDate"></error>
             </div>
             <div class="row">
                 <label class="label" for="notes">Notes</label>
                 <textarea class="notes" id="notes" name="notes" placeholder="Comments"></textarea>
             </div>
             <div class="button">
-                <div class="cancel"><a href=""><button>Cancel</button></a></div>
+                <div class="cancel"><a href="../pages/Employee_HomePage.html"><button>Cancel</button></a></div>
                 <div>
                     <button class="submit" type="submit" id="submit">Submit</button>
                     <button class="reset" type="reset">Reset</button>

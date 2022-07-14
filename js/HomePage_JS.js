@@ -11,7 +11,7 @@ const getEmployeeDateFromLocalStorage = () =>{
 }
 
 const createInnerHtml = () =>{
-    const headerHtml = "<tr class='table-header'><th></th><th>Name</th><th>Gender</th><th>Salary</th><th>Department</th><th>Start Date</th><th>Actions</th></tr>";
+    const headerHtml = "<tr class='table-header'><th></th><th>ID</th><th>Name</th><th>Gender</th><th>Salary</th><th>Department</th><th>Start Date</th><th>Actions</th></tr>";
     let innerHtml = `${headerHtml}`;
     if(employeePayrollList.length == 0) {return;}
     for(const employeePayrollData of employeePayrollList)
@@ -19,14 +19,15 @@ const createInnerHtml = () =>{
         innerHtml = `${innerHtml}
             <tr>
                 <td><img src="${employeePayrollData._profilePic}" alt=""></td>
+                <td>${employeePayrollData._id}</td>
                 <td>${employeePayrollData._name}</td>
                 <td>${employeePayrollData._gender}</td>
                 <td>${employeePayrollData._salary}</td>
                 <td>${getDept(employeePayrollData._department)}</td>
-                <td>${employeePayrollData._startDate}</td>
+                <td>${stringifyDate(employeePayrollData._startDate)}</td>
                 <td>
-                    <img class="actions" id="${employeePayrollData._name}" onclick="remove(this)" alt="delete" src="../assets/delete.png">
-                    <img class="actions" id="${employeePayrollData._name}" onclick="update(this)" alt="update" src="../assets/pen.png">
+                    <img class="actions" id="${employeePayrollData._id}" onclick="remove(this)" alt="delete" src="../assets/delete.png">
+                    <img class="actions" id="${employeePayrollData._id}" onclick="update(this)" alt="update" src="../assets/pen.png">
                 </td>
             </tr>
         `;
@@ -44,9 +45,9 @@ const getDept = (deptList) =>{
 }
 
 const remove = (node) =>{
-    let employeeData = employeePayrollList.find(empData => empData._name == node.id);
+    let employeeData = employeePayrollList.find(empData => empData._id == node.id);
     if(!employeeData){return;}
-    const index =employeePayrollList.map(empData => empData._name).indexOf(employeeData._name);
+    const index =employeePayrollList.map(empData => empData._id).indexOf(employeeData._id);
     employeePayrollList.splice(index, 1);
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
     document.querySelector('.employee-count').textContent = employeePayrollList.length;

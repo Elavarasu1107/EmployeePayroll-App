@@ -54,15 +54,17 @@ class EmployeePayroll
         return this._startDate;
     }
     set startDate(startDate){
-        let now = new Date().toLocaleDateString();
-        if(startDate <= now)
+        let now = new Date();
+        if(startDate > now)
         {
-            this._startDate = startDate;
+            throw "Start Date is a Future Date";
         }
-        else
+        var diff = Math.abs(now.getTime() - startDate.getTime());
+        if(diff/(1000 * 60 * 60 * 24) > 30)
         {
-            throw "Invalid Date";
+            throw "Start Date is beyond 30 Days";
         }
+        this._startDate = startDate;
     }
 
     get notes(){
@@ -74,7 +76,9 @@ class EmployeePayroll
 
     toString()
     {
+        const options ={day:'numeric', month:'short', year:'numeric'};
+        const empDate = !this.startDate ? "undefined" : this.startDate.toLocaleDateString('en-GB', options);
         return "Id: " + this.id + ", Name: " + this.name + ", Profile Pic: " + this.profilePic + ", Gender: " + this.gender + 
-        ", Department: " + this.department + ", Salary: " + this.salary + ", StartDate: " + this.startDate + ", Notes: " + this.notes;
+        ", Department: " + this.department + ", Salary: " + this.salary + ", StartDate: " + empDate + ", Notes: " + this.notes;
     }
 }
