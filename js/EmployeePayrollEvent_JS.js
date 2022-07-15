@@ -46,7 +46,7 @@ const save = (event) =>{
         setEmployeePayrollObject();
 	    createLocalStorage();
         resetForm();
-        window.location.replace(siteProperties.homePage);
+        window.location.href = "../pages/Employee_HomePage.html";
     }
     catch (ex){
         return;
@@ -171,6 +171,7 @@ const resetForm = () =>{
     unCheckValues('[name = gender]');
     unCheckValues('[name = department]');
     setValue('#salary','50000');
+    document.querySelector('.salary-output').textContent = document.querySelector('#salary').value;
     setSelectedIndex('#day',0);
     setSelectedIndex('#month', 0);
     setSelectedIndex('#year', 0);
@@ -207,7 +208,7 @@ const checkForUpdate =()=>{
     setForm();
 }
 
-const setForm =()=>{
+const setForm = () =>{
     setValue('#id', employeePayrollObject._id);
     setValue('#name', employeePayrollObject._name);
     setSelectedValue('[name=profile]', employeePayrollObject._profilePic);
@@ -216,7 +217,7 @@ const setForm =()=>{
     setValue('#salary', employeePayrollObject._salary);
     setTextValue('.salary-output', employeePayrollObject._salary)
     setValue('#notes', employeePayrollObject._notes);
-    let date = stringifyDate(employeePayrollObject._startDate).split(" ");
+    let date = stringifyDateSet(employeePayrollObject._startDate).split(" ");
     setValue('#day', date[0]);
     setValue('#month', date[1]);
     setValue('#year', date[2]);
@@ -234,10 +235,16 @@ const setSelectedValue =(propertyValue, value) =>{
         }
         else
         {
-            if(item.value ===value)
+            if(item.value === value)
             {
                 item.checked = true;
             }
         }
     });
+}
+
+const stringifyDateSet = (date) =>{
+    const options ={day:'numeric', month:'short', year:'numeric'};
+    const newDate = !date ? "undefined" :new Date(Date.parse(date)).toLocaleDateString('en-GB', options);
+    return newDate;
 }
