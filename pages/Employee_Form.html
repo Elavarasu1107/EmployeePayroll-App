@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/PayrollStyle.css"/>
     <link href="../assets/tab_icon.png" rel="icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script defer src="../js/EmployeePayroll_JS.js"></script>
     <script defer src="../js/EmployeePayrollEvent_JS.js"></script>
     <title>Employee Form</title>
 </head>
@@ -24,10 +23,10 @@
     <div class="form-content">
         <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
             <div class="form-head">Employee Payroll Form</div>
-            <div class="row">
+            <!--<div class="row">
                 <label class="label" for="id">ID</label>
-                <input type="text" id="id" name="id" placeholder="Enter ID" required>
-            </div>
+                <input type="text" id="id" name="id" placeholder="Enter ID" >
+            </div>-->
             <div class="row">
                 <label class="label" for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter Name" required>
@@ -171,7 +170,7 @@
                 <textarea class="notes" id="notes" name="notes" placeholder="Comments"></textarea>
             </div>
             <div class="button">
-                <div class="cancel"><a href="../pages/Employee_HomePage.html"><button>Cancel</button></a></div>
+                <div class="cancel"><a id="cancelButton" href="../pages/Employee_HomePage.html"><button>Cancel</button></a></div>
                 <div>
                     <button class="submit" type="submit" id="submit">Submit</button>
                     <button class="reset" type="reset">Reset</button>
@@ -181,5 +180,6 @@
     </div>
     <script src="../js/Utility.js"></script>
     <script src="../js/SiteProperties.js"></script>
+    <script src="../js/Http_Services.js"></script>
 </body>
 </html>
