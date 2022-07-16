@@ -2,7 +2,6 @@ let isUpdate = false;
 let employeePayrollObject = {};
 
 window.addEventListener('DOMContentLoaded', (event) =>{
-    
     const name = document.querySelector('#name');
     name.addEventListener('input', function(){
     if(name.value.length == 0)
@@ -124,12 +123,8 @@ const createLocalStorage = (employeePayroll) =>{
 
 const createNewEmployeePayroll = (id) =>{
     let employeePayroll = new EmployeePayroll();
-    if(id){
-        employeePayroll.id = createNewEmployee();
-    }
-    else{
-        employeePayroll.id = id;
-    }
+    if(!id) employeePayroll.id = createNewEmployee();
+    else employeePayroll.id = id;
     setEmployeePayrollData(employeePayroll);
     return employeePayroll;
 }
@@ -217,7 +212,7 @@ const setForm = () =>{
     setValue('#salary', employeePayrollObject._salary);
     setTextValue('.salary-output', employeePayrollObject._salary)
     setValue('#notes', employeePayrollObject._notes);
-    let date = stringifyDateSet(employeePayrollObject._startDate).split(" ");
+    let date = stringifyDate(employeePayrollObject._startDate).split(" ");
     setValue('#day', date[0]);
     setValue('#month', date[1]);
     setValue('#year', date[2]);
@@ -241,10 +236,4 @@ const setSelectedValue =(propertyValue, value) =>{
             }
         }
     });
-}
-
-const stringifyDateSet = (date) =>{
-    const options ={day:'numeric', month:'short', year:'numeric'};
-    const newDate = !date ? "undefined" :new Date(Date.parse(date)).toLocaleDateString('en-GB', options);
-    return newDate;
 }
