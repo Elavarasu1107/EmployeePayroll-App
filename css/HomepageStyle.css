@@ -145,3 +145,72 @@ td img{
     font-weight: 300;
     margin-bottom: 8px;
 }
+
+@media screen and (max-width:900px){
+    .header-main {
+        width: 90%;
+        border: 0px solid rebeccapurple;
+        display: flex;
+        font-weight: bold;
+    }
+    .header {
+        border: 0px solid red;
+        background-color: aliceblue;
+        width: 100%;
+        align-content: center;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu {
+        border: 0px solid gold;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 90%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .table-main {
+        width: 90%;
+        margin: auto;
+        overflow: auto;
+        border: 0px solid rebeccapurple;
+    }
+}
+
+@media screen and (max-width:768px){
+    .header-main {
+        width: 100%;
+        border: 0px solid rebeccapurple;
+        display: flex;
+        font-weight: bold;
+    }
+    .menu {
+        border: 0px solid gold;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .table-main {
+        width: 100%;
+        margin: auto;
+        overflow: auto;
+        border: 0px solid rebeccapurple;
+    }
+    .department {
+        background: yellow;
+        border-radius: 40px;
+        width: fit-content;
+        padding: 1px 7px;
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        font-weight: 300;
+        margin-bottom: 8px;
+    }
+}

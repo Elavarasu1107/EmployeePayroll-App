@@ -1,8 +1,8 @@
 {
   "employeePayrollDB": [
     {
-      "_name": "Elavarasu",
-      "_profilePic": "../assets/Profile/employee-1.jpeg",
+      "_name": "Nantha",
+      "_profilePic": "../assets/Profile/employee-4.jpeg",
       "_gender": "Male",
       "_department": [
         "HR",
@@ -12,34 +12,32 @@
         "Others"
       ],
       "_salary": "100000",
-      "_notes": "Ela...",
+      "_notes": "Nantha...",
       "_startDate": "12 Jul 2022",
       "id": 1
     },
     {
-      "_name": "Nantha",
-      "_profilePic": "../assets/Profile/employee-4.jpeg",
+      "_name": "Elavarasu",
+      "_profilePic": "../assets/Profile/employee-1.jpeg",
       "_gender": "Male",
       "_department": [
-        "HR",
-        "Finance",
-        "Others"
+        "Engineer"
       ],
-      "_salary": "100000",
-      "_notes": "Nantha...",
-      "_startDate": "13 Jul 2022",
+      "_salary": "50000",
+      "_notes": "Ela...",
+      "_startDate": "10 Jul 2022",
       "id": 2
     },
     {
-      "_name": "Jaya",
-      "_profilePic": "../assets/Profile/employee-2.jpeg",
-      "_gender": "Female",
+      "_name": "Senthil",
+      "_profilePic": "../assets/Profile/employee-4.jpeg",
+      "_gender": "Male",
       "_department": [
-        "HR",
-        "Finance"
+        "Sales",
+        "Engineer"
       ],
-      "_salary": "92000",
-      "_notes": "Jaya Sudha...",
+      "_salary": "75000",
+      "_notes": "Senthil...",
       "_startDate": "13 Jul 2022",
       "id": 3
     }

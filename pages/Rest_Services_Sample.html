@@ -43,7 +43,7 @@
                 deleteElement.textContent = "Delete User Data :" + responseText;
             })
             .catch(error => { 
-                getElement.textContent = "Delete Error Status" + JSON.stringify(error); 
+                deleteElement.textContent = "Delete Error Status" + JSON.stringify(error); 
             });
 
         const postElement = document.querySelector("#post");
@@ -66,7 +66,7 @@
                 postElement.textContent = "Post User Data :" + responseText;
             })
             .catch(error => { 
-                getElement.textContent = "Post Error Status" + JSON.stringify(error); 
+                postElement.textContent = "Post Error Status" + JSON.stringify(error); 
             });
     </script>
 </body>

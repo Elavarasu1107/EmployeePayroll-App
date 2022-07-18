@@ -215,6 +215,18 @@ button:hover{
     }
 }
 
+@media screen and (max-width:768px){
+    .form {
+        border: 0px solid red;
+        width: 80%;
+        padding: 60px 70px;
+        background: white;
+        box-shadow: 0px 3px 6px grey;
+        border-radius: 10px;
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width:480px){
     body {
         margin: 0;
